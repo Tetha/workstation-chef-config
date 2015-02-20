@@ -1,1 +1,1 @@
-sudo chef-solo -j default_attributes.json $( pwd )
+sudo chef-solo -j default_attributes.json -c solo.rb
