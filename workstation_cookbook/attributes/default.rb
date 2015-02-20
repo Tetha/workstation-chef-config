@@ -1,7 +1,7 @@
 
 default['my-workstation']['user'] = '/home/hkraemer'
 
-default['my-workstation']['i3']['packages'] = %w(i3 i3-lock)
+default['my-workstation']['i3']['packages'] = %w(i3 i3lock)
 default['my-workstation']['xterm']['packages'] = %w(xterm)
 default['my-workstation']['vim']['packages'] = %w(vim gvim)
 
