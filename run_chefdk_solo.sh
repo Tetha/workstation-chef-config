@@ -1,1 +1,1 @@
-sudo chef-solo -j default_attributes.json . 
+sudo chef-solo -j default_attributes.json $( pwd )
