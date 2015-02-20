@@ -7,7 +7,7 @@ end
 
 template "#{node['my-workstation']['home']}/.vim/colors/oceandeep.vim" do
     source 'oceandeep.vim.erb'
-done
+end
 
 node['my-workstation']['vim']['pathogen-plugins'].each do |name, config|
     git "#{node['my-workstation']['home']}/.vim/bundle/#{name}" do
