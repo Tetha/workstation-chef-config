@@ -6,7 +6,7 @@ node['my-workstation']['vim']['packages'].each do |p|
 end
 
 node['my-workstation']['vim']['directories'].each do |d|
-    directory d do
+    directory File.join( node['my-workstation']['home'], d) do
         action :create
 	recursive true
 	owner node['my-workstation']['user']
