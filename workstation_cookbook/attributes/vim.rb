@@ -1,5 +1,5 @@
 
-default['my-workstation']['vim']['packages'] = %w(vim gvim exuberant-ctags)
+default['my-workstation']['vim']['packages'] = %w(vim gvim ctags)
 
 default['my-workstation']['vim']['static-templates'] = {
   'global_vimrc.erb' => '.vimrc',
