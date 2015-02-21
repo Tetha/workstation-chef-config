@@ -5,6 +5,15 @@ node['my-workstation']['vim']['packages'].each do |p|
     end
 end
 
+node['my-workstation']['vim']['directories'].each do |d|
+    directory d do
+        action :create
+	recursive true
+	owner node['my-workstation']['user']
+	group node['my-workstation']['group']
+    end
+end
+
 template "#{node['my-workstation']['home']}/.vim/colors/oceandeep.vim" do
     source 'oceandeep.vim.erb'
 end
