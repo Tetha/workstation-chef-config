@@ -18,7 +18,7 @@ template File.join( node['my-workstation']['home'], '.vimrc' ) do
     source 'global_vimrc.erb'
 end
 
-template File.join( node['my-workstation']['home'], '.vim/autoload/pathogen.vim' do
+template File.join( node['my-workstation']['home'], '.vim/autoload/pathogen.vim' ) do
     source 'pathogen.vim.erb'
 end
 
