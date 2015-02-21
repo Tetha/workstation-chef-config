@@ -5,7 +5,7 @@ node['my-workstation']['powerline']['packages'].each do |p|
   end
 end
 
-execute "Install Powerline" do
-  command "pip install powerline-status"
-  creates "/usr/bin/powerline"
+execute 'Install Powerline' do
+  command 'pip install powerline-status'
+  creates '/usr/bin/powerline'
 end
