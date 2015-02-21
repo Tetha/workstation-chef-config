@@ -19,13 +19,13 @@ node['my-workstation']['vim']['static-templates'].each do |template, target|
   end
 end
 
+directory "#{node['my-workstation']['home']}/.vim/bundle" do
+  action :create
+  owner node['my-workstation']['user']
+  group node['my-workstation']['group']
+  recursive true
+end
 node['my-workstation']['vim']['pathogen-plugins'].each do |name, config|
-  directory "#{node['my-workstation']['home']}/.vim/bundle" do
-    action :create
-    owner node['my-workstation']['user']
-    group node['my-workstation']['group']
-    recursive true
-  end
   
   git "#{node['my-workstation']['home']}/.vim/bundle/#{name}" do
     action :sync
