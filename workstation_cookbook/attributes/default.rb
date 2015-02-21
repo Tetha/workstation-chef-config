@@ -7,7 +7,7 @@ default['my-workstation']['i3']['packages'] = %w(i3 i3lock)
 default['my-workstation']['xterm']['packages'] = %w(xterm)
 default['my-workstation']['vim']['packages'] = %w(vim gvim)
 
-default['my-workstation']['vim']['directories'] = %w(.vim/colors .vim/bundle)
+default['my-workstation']['vim']['directories'] = %w(.vim/colors .vim/bundle .vim/autoload)
 
 default['my-workstation']['vim']['pathogen-plugins']['easytags'] = {
     "repo" => "https://github.com/xolox/vim-easytags"

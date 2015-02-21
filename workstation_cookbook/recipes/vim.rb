@@ -14,6 +14,10 @@ node['my-workstation']['vim']['directories'].each do |d|
     end
 end
 
+template File.join( node['my-workstation']['home'], '.vim/autoload/pathogen.vim' do
+    source 'pathogen.vim'
+end
+
 template "#{node['my-workstation']['home']}/.vim/colors/oceandeep.vim" do
     source 'oceandeep.vim.erb'
 end
