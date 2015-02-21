@@ -5,25 +5,17 @@ node['my-workstation']['vim']['packages'].each do |p|
     end
 end
 
-node['my-workstation']['vim']['directories'].each do |d|
-    directory File.join( node['my-workstation']['home'], d) do
+node['my-workstation']['vim']['static-templates'].each do |template, target|
+    destination = File.join( node['my-workstation']['home'], target )
+    directory File.dirname( destination ) do
         action :create
-	recursive true
-	owner node['my-workstation']['user']
-	group node['my-workstation']['group']
+        owner node['my-workstation']['user']
+        group node['my-workstation']['group']
     end
-end
 
-template File.join( node['my-workstation']['home'], '.vimrc' ) do
-    source 'global_vimrc.erb'
-end
-
-template File.join( node['my-workstation']['home'], '.vim/autoload/pathogen.vim' ) do
-    source 'pathogen.vim.erb'
-end
-
-template "#{node['my-workstation']['home']}/.vim/colors/oceandeep.vim" do
-    source 'oceandeep.vim.erb'
+    template destination do
+        source template
+    end
 end
 
 node['my-workstation']['vim']['pathogen-plugins'].each do |name, config|
