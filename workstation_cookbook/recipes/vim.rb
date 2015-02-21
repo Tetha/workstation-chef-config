@@ -11,6 +11,7 @@ node['my-workstation']['vim']['static-templates'].each do |template, target|
     action :create
     owner node['my-workstation']['user']
     group node['my-workstation']['group']
+    recursive true
   end
 
   template destination do
@@ -22,5 +23,7 @@ node['my-workstation']['vim']['pathogen-plugins'].each do |name, config|
   git "#{node['my-workstation']['home']}/.vim/bundle/#{name}" do
     action :sync
     repository config['repo']
+    owner node['my-workstation']['user']
+    group node['my-workstation']['group']
   end
 end
