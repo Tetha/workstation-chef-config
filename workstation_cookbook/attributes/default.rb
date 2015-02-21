@@ -28,3 +28,7 @@ default['my-workstation']['vim']['pathogen-plugins']['powerline'] = {
 default['my-workstation']['vim']['pathogen-plugins']['localvimrc'] = {
   'repo' => 'https://github.com/embear/vim-localvimrc'
 }
+
+default['my-workstation']['vim']['pathogen-plugins']['vim-misc'] = {
+  'repo' => 'https://github.com/xolox/vim-misc'
+}
