@@ -15,6 +15,6 @@ end
 bash 'source_xresources' do
   cwd node['my-workstation']['home']
   code <<-EOH
-    xrdb -load #{node['my-workstation']['home']}.Xresources
+    xrdb -load #{node['my-workstation']['home']}/.Xresources
     EOH
 end
