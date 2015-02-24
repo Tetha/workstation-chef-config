@@ -17,9 +17,12 @@ directory node['my-workstation']['cache'] do
   recursive true
 end
 
-git 'https://github.com/powerline/fonts.git' do
+git 'Powerline Fonts -> Cache' do
   action :checkout
+  repository 'https://github.com/powerline/fonts.git'
   destination "#{node['my-workstation']['cache']}/powerline_fonts"
+  owner node['my-workstation']['user']
+  group node['my-workstation']['group']
   notifies :run, 'bash[install_fonts]', :immediately
 end
 
