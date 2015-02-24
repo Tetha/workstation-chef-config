@@ -17,7 +17,7 @@ directory node['my-workstation']['cache'] do
   recursive true
 end
 
-git clone 'https://github.com/powerline/fonts.git' do
+git 'https://github.com/powerline/fonts.git' do
   action :checkout
   destination "#{node['my-workstation']['cache']}/powerline_fonts"
   notifies :run, 'bash[install_fonts]', :immediately
