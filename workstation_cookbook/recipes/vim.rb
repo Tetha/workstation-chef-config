@@ -26,7 +26,6 @@ directory "#{node['my-workstation']['home']}/.vim/bundle" do
   recursive true
 end
 node['my-workstation']['vim']['pathogen-plugins'].each do |name, config|
-  
   git "#{node['my-workstation']['home']}/.vim/bundle/#{name}" do
     action :sync
     repository config['repo']
