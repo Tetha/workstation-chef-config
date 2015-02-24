@@ -28,6 +28,8 @@ end
 
 bash 'install_fonts' do
   action :nothing
+  user node['my-workstation']['user']
+  group node['my-workstation']['group']
   cwd "#{node['my-workstation']['cache']}/powerline_fonts"
   code <<-EOH
     ./install.sh
