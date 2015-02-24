@@ -13,7 +13,7 @@ directory "#{node['my-workstation']['home']}/.i3" do
 end
 
 template "#{node['my-workstation']['home']}/.i3/config" do
-  source "i3_config.erb"
+  source 'i3_config.erb'
   owner node['my-workstation']['user']
   group node['my-workstation']['group']
 end
