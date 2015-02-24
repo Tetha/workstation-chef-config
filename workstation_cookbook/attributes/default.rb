@@ -1,5 +1,6 @@
 
 default['my-workstation']['home'] = '/home/hkraemer'
+default['my-workstation']['cache'] = '/home/hkraemer/.workstation_chef_tmp'
 default['my-workstation']['user'] = 'hkraemer'
 default['my-workstation']['group'] = 'hkraemer'
 
