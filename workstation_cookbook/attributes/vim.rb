@@ -26,3 +26,15 @@ default['my-workstation']['vim']['pathogen-plugins']['localvimrc'] = {
 default['my-workstation']['vim']['pathogen-plugins']['vim-misc'] = {
   'repo' => 'https://github.com/xolox/vim-misc'
 }
+
+default['my-workstation']['vim']['pathogen-plugins']['indent-guides'] = {
+  'repo' => 'https://github.com/nathanaelkane/vim-indent-guides'
+}
+
+default['my-workstation']['vim']['pathogen-plugins']['nerdtree'] = {
+  'repo' => 'https://github.com/scrooloose/nerdtree.git'
+}
+
+default['my-workstation']['vim']['pathogen-plugins']['tabular'] = {
+  'repo' => 'git://github.com/godlygeek/tabular.git'
+}
