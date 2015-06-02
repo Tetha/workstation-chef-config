@@ -38,3 +38,7 @@ default['my-workstation']['vim']['pathogen-plugins']['nerdtree'] = {
 default['my-workstation']['vim']['pathogen-plugins']['tabular'] = {
   'repo' => 'git://github.com/godlygeek/tabular.git'
 }
+
+default['my-workstation']['vim']['pathogen-plugins']['multi_cursor'] = {
+  'repo' => 'https://github.com/terryma/vim-multiple-cursors.git'
+}
